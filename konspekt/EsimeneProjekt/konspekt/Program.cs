@@ -57,6 +57,24 @@
 
             /* siia käib vooskeemi järgi kirjutatud kood näidisülesanne 3 kohta */
 
+            //string Kasutaja = "opilane";
+            //string Parool = "opilane";
+
+            //Console.WriteLine("Sisesta kasutajanimi: ");
+            //string kasutajaNimi = Console.ReadLine();
+
+            //Console.WriteLine("Sisesta parool: ");
+            //string parool = Console.ReadLine();
+
+            //if (kasutajaNimi == Kasutaja && parool == Parool)
+            //{
+            //    Console.WriteLine("Sisselogimine õnnestus!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Vale kasutajanimi või parool.");
+            //}
+
             ////ctrl + k + c/u
 
             //int mingiArv = 4;
