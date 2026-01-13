@@ -33,17 +33,17 @@
              * 
              */
 
-            /*int kasutajaVanus = 0;
-            Console.WriteLine("Kui vana sa oled?");
-            kasutajaVanus = int.Parse(Console.ReadLine());
-            if (kasutajaVanus >= 18)
-            {
-                Console.WriteLine("Tere, siin on sinu mojito 🍹");
-            }
-            else
-            {
-                Console.WriteLine("Alaealisi sisse ei lasta, mine vembutembumaale. 🤡");
-            }*/
+            //int kasutajaVanus = 0; 
+            //Console.WriteLine("Kui vana sa oled?");
+            //kasutajaVanus = int.Parse(Console.ReadLine());
+            //if (kasutajaVanus >= 18)
+            //{
+            //    Console.WriteLine("Tere, siin on sinu mojito 🍹");
+            //}
+            //else 
+            //{
+            //    Console.WriteLine("Alaealisi sisse ei lasta, mine vembutembumaale. 🤡");
+            //}
 
             /*
              näiteprogramm 3:
@@ -58,30 +58,115 @@
             /* siia käib vooskeemi järgi kirjutatud kood näidisülesanne 3 kohta */
 
             ////ctrl + k + c/u
-            ///
-            /*int mingiArv = 4;
 
-            mingiArv = mingiArv + 15; //
-            mingiArv = mingiArv - 15; //
-            mingiArv = mingiArv * 15; //
-            mingiArv = mingiArv / 15; //
+            //int mingiArv = 4;
 
-            mingiArv += 15; //
-            mingiArv -= 15; //
-            mingiArv *= 15; //
-            mingiArv /= 15; //
+            //mingiArv = mingiArv + 15; //
+            //mingiArv = mingiArv * 15; //
+            //mingiArv = mingiArv - 15; //
+            //mingiArv = mingiArv / 15; //
 
-            /* näiuteülesanne 4 */
-            /*Console.WriteLine("Palun sisesta oma vanus");
-            int kasutajaVanus = int.Parse(Console.ReadLine());
-            Console.WriteLine("Palun sisesta oma vanaema ´vanus");
-            int kasutajaVanaemaVanus = int.Parse(Console.ReadLine());
-            int vanuseVahe = kasutajaVanaemaVanus - kasutajaVanus;
-            Console.WriteLine(kasutajaVanaemaVanus - kasutajaVanus);
-            Console.WriteLine("Kui palju sa vanem oled?");
-            kasutajaVanus += int.Parse(Console.ReadLine());
-            Console.WriteLine("Vanuste vahe on nüüd: " + (kasutajaVanaemaVanus - kasutajaVanus));*/
 
+            //mingiArv += 15; //
+            //mingiArv -= 15; //
+            //mingiArv *= 15; //
+            //mingiArv /= 15; //
+
+            ///* näiteülesanne 4 */
+            //Console.WriteLine("Palun sisesta oma vanus"); 
+            //// esitame kasutajale küsimuse, console writeline kuvamisfunktsiooniga
+            //int kasutajavanus = int.Parse(Console.ReadLine()); 
+            //// tekitame muutuja kasutajavanus ning omistame sinna käsurealt int.Parser abiga täisarvu
+            //Console.WriteLine("Palun sisesta oma vanavanema vanus"); 
+            //// esitame kasutajale küsimuse, console writeline kuvamisfunktsiooniga
+            //int kasutajaVanavanemaVanus = int.Parse(Console.ReadLine()); 
+            //// tekitame muutuja kasutajaVanavanemaVanus ning omistame sinna käsurealt int.Parser abiga täisarvu
+            //int vanusteVahe = kasutajaVanavanemaVanus - kasutajavanus; 
+            //// tekitame uue täisarvu muutuja kuhu omistame avaldise kasutajaVanavanemaVanus - kasutajavanus tulemuse
+            //Console.WriteLine(kasutajaVanavanemaVanus - kasutajavanus);
+            //// saab ka otse kuvada, ilma muutujata
+            //Console.WriteLine("Kui palju sa vanem oled?");
+            //// esitame kasutajale küsimuse, console writeline kuvamisfunktsiooniga
+            //kasutajavanus += int.Parse(Console.ReadLine());
+            //// kasutame omistusoperaatorit, et lisada muutujale kasutaja poolt esitatud täisarvu
+            //Console.WriteLine("vanuste vahe on nüüd: "+(kasutajaVanavanemaVanus - kasutajavanus));
+            //// kuvame uuesti vanuste vahe koos tekstiga
+
+            /* näiteülesanne 5 */
+
+            //Console.WriteLine("Kui kaugele oli su viimane kuulitõuge (m)?");
+            //float kaugus = float.Parse(Console.ReadLine());
+            //if ( kaugus <= 1.00 && kaugus >= 0.00 )
+            //{
+            //    Console.WriteLine("Sa suudad kindlasti rohkem, cmon bruh");
+            //}
+            //else if (kaugus <= 2.00 && kaugus >= 1.01)
+            //{
+            //    Console.WriteLine("Noh tuleb juba, jõuad veel!");
+            //}
+            //else if (kaugus <= 3.00 && kaugus >= 2.01 )
+            //{
+            //    Console.WriteLine("TUBLI kolm meetrit umbes, peaaegu, vist... not sure");
+            //}
+            //else if (kaugus < 0)
+            //{
+            //    Console.WriteLine("MIKS SA TAGURPIDI VISKAD?!?!?!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Ossaraks, seda on varsti orbiidilt näha");
+            //}
+
+            /* näiteülesanne 6 */
+            // kirjuta programm mis
+            /*
+            küsib kasutajalt tema vanust, ✅
+            kui vanus on väiksem kui 0 või sama kui 0, kuva kasutajale sõnum ajarändureid me ei teeninda ✅
+            kui vanus on suurem kui 0 aga väiksem kui 18, küsi kasutajalt tema nime, ning tagasta sõnum kallis <nimi>, palun kutsu oma lapsevanem siia. ✅
+            kui vanus on suurem kui 18, küsi kasutajalt tema eesnime, ja perekonnanime ✅
+            tee tingimuskontroll, mis kontrollib et eesnimi ei oleks tühi, või perekonnanimi ei oleks tühi, ning tagasta sõnum sisestama pidi mõlemad nime ✅
+            kui aga mõlemad nimed on olemas, siis tagasta kasutajale tema ees ja perekonnanimega tervitus. ✅
+            */
+
+            Console.WriteLine("Palun sisesta oma vanus, kirjuta täisarvuna: ");
+            int isikuVanus = 0;
+            isikuVanus = int.Parse(Console.ReadLine());
+            if (isikuVanus <= 0)
+            {
+                Console.WriteLine("Ajarändureid me ei teeninda");
+            }
+            else if (isikuVanus > 0 && isikuVanus < 18)
+            {
+                Console.WriteLine("Palun sisesta oma nimi:");
+                string kasutajaNimi = "";
+                kasutajaNimi = Console.ReadLine();
+                Console.WriteLine($"Kallis {kasutajaNimi}, palun kutsu siia oma lapsevanem.");
+            }
+            else
+            {
+                Console.WriteLine("Palun kirjuta siia oma Eesnimi:");
+                string eesNimi = "";
+                eesNimi = Console.ReadLine();
+                Console.WriteLine("Palun kirjuta siia ka oma Perekonnanimi:");
+                string perekonnaNimi = "";
+                perekonnaNimi = Console.ReadLine();
+                if (eesNimi == "" || perekonnaNimi == "")
+                {
+                    Console.WriteLine("Sisestama pidi mõlemad nimed >:C");
+                }
+                else
+                {
+                    Console.WriteLine($"Tere päevast {eesNimi} {perekonnaNimi}!");
+                }
+            }
+
+            /*
+                üleval harjutused
+
+                https://meet.google.com/qjt-wofj-gdb
+
+                all teooria
+                */
 
             ///*   -= L I H T A N D M E T Ü Ü B I D =-             */
             //string tekst = "mingisugune inimloetav tekstike"; //tekst
@@ -94,48 +179,67 @@
             //var y = "ABC";
             //bool jahvõiei = false; //kas true või false.
 
-            ///**/
+            ///* Muutuja nime näide: */
             ////string string = "abc"; //is bäd
             //string sõne = "abc"; //is gud
 
-            /*  -= O M I S T U S O P E R A A T O R I D =-   */
-            /*// =  -üksik võrdusmärk omistab muutuja sisse võõrtuse, mida adresseeritakse muutuja enda nimega
+            /*   -= O M I S T U S O P E R A A T O R I D =-          */
+            // =    -> üksik võrdusmärk omistab muutja sisse väärtuse, mida adresseeritakse muutuja enda nimega
             int muutuja = 1;
-            // += -võrdusmärk mille ees on pluss, automaatselt liidab muutujale otsa võrdusmärgi teisel pool oleva väärtuse
+            // +=   -> võrdusmärk mille ees on pluss, automaatselt liidab muutujale otsa võrdusmärgi teisel pool oleva väärtuse
             muutuja += 2;
-            // -= -võrdusmärk mille ees on miinus, automaatselt lahutab muutujalt otsa võrdusmärgi teisel pool oleva väärtuse
+            // -=   -> võrdusmärk mille ees on miinus, automaatselt lahutab muutujas olevast väärtusest võrdusmärgi teisel pool oleva väärtuse
             muutuja -= 1;
-            // *= -võrdusmärk mille ees on korrutusmärk, automaatselt korrutab muutujat võrdusmärgi teisel pool oleva väärtusega
+            // *=   -> võrdusmärk mille ees on korrutusmärk, automaatselt korrutab muutuja sisu võrdusmärgi teisel pool oleva väärtuse kordi
             muutuja *= 3;
-            // /= -võrdusmärk mille ees on jagamismärk, automaatselt jagab muutujat võrdusmärgi teisel pool oleva väärtusega
+            // /=   -> võrdusmärk mille ees on jagamismärk, automaatselt jagab muutuja sisu võrdusmärgi teisel pool oleva väärtuse osadeks
             muutuja /= 4;
-            // % = -võrdusmärk mille ees on jäägimärk, automaatselt võtab muutujalt jäägi võrdusmärgi teisel pool oleva väärtusega jagamisel
+            // %=   -> võrdusmärk mille ees on modulus, automaatselt jätab muutujasse jäägi.
             muutuja %= 2;
-            // ++ on kiirtehe, mis liidab muutujale 1
-            muutuja ++;
-            // -- on kiirtehe, mis lahutab muutujalt 1
-            muutuja --; */
 
-            /*näidisülesanne*/
-            Console.WriteLine("Kui kaugele oli su viimane kuulitõuge (m)?");
-            float kaugus = float.Parse(Console.ReadLine());
-            if (kaugus <= 1.00)
-            {
-                Console.WriteLine("Sa suudad kindlasti rohkem, cmon bruh");
+            // ++   -> on kiirtehe, mis muutujale liidab ainult ühe juurde.
+            muutuja++;
+            // --   -> on kiirtehe, mis muutujast lahutab ainult ühe maha.
+            muutuja--;
+
+            /*   -= V Õ R D L U S O P E R A A T O R I D =-          */
+            // ==   ->  "on võrdne/on täpselt sama" - Võrdusmärkide ühel pool olev objekt peab vastama
+            //          oma olemuselt täpselt võrdusmärkide teisel pool oleva objektiga
+            // >    ->  "on suurem kui" - Märgist vasakul pool olev objekt peaks olema suurem kui paremal pool olev objekt
+            // <    ->  "on väiksem kui" - Märgist vasakul pool olev objekt peaks olema väiksem kui paremal pool olev objekt
+            // >=   ->  "on suurem kui, või samavõrdne" - Märgist vasakul pool olev objekt peaks olema vähemalt sama suur või suurem
+            //          kui paremal pool olev objekt
+            // <=   ->  "on väiksem kui, või samavõrdne" - Märgist vasakul pool olev objekt peaks olema maksimaalselt sama suur või väiksem
+            //          kui paremal pool olev objekt
+            // !=   ->  "ei tohi olla" võrdusmärgi vasakul pool olev objekt ei tohi omada IDENTSET kuju paremal pool oleva objektiga, kõik muud
+            //          väärtused on lubatud.
+
+            /*   -= L O O G I L I S E D    T E H T E D =-          */
+            // &&   ->  "AND" loogiline tehe, mida kasutatakse tingimuste kirjeldamisel, ning mis annab positiivse vastuse "true" juhul kui
+            //          mõlemal pool märki "&&" olevad tingimused omakorda annavad oma avaldise tulemusena "true"
+            //          või teisisõnu: true + true = true
+            // ||   ->  "OR" loogiline tehe, mida kasutatakse tingimuste kirjeldamisel, ning mis annab positiivse vastuse "true" juhul kui
+            //          ühel pool märki "||" olev tingimus annab oma avaldise tulemusena "true", ei ole vahet millisel pool märki
+            //          või teisisõnu: true + false = true
+            // !    ->  "NOT" loogiline tehe, mida kasutatakse tingimuse avaldise tulemuse inverteerimiseks. Tulemus mis muidu tagastaks "true",
+            //          hüüumärgi abil nüüd tagastab false, ja vastupidi - tulemus mis muidu tagastaks "false", nüüd tagastab "true".
+            //          ehk teisisõnu: true = false / false = true
+
+            /*   -= T I N G I M U S L A U S E =-                   */
+            if (true)       //  Kaitstud sõna "if" kutsub esile tingimuslause, mille tingimuse avaldis on sellele järgnevate () sulgude vahel.
+            {               //  Järgneb {} loogeliste sulgude vahel koodiplokk, mis teostatakse siis, kui tingimuse avaldis annab tulemusena "true",
+                            //  "false" tulemuse puhul jäetakse kood vahele
             }
-            else if (kaugus <= 2.00)
-            {
-                Console.WriteLine("No tuleb juba, jõuad veel!");
+            else if (true)  //  Kaitstud sõnad "else" ja "if" (koos "else if") kutsuvad esile sekundaarse tingimuslause, mille tingimus on samamoodi
+                            //  sellele järgnevate sulgude vahel, ning millele peab alati eelnema kas "if" või teine "else if". Else if tingimust
+                            //  kontrollitakse ainult siis, kui sellele eelnev tingimus tagastab avaldise tulemusena "false".
+            {               //  Järgneb {} loogeliste sulgude vahel koodiplokk, mis teostatakse siis, kui else if tingimuslause avaldis annab tulemusena "true",
+                            //  "false" tulemuse puhul jäetakse kood vahele ning minnakse edasi järgneva tingimuse või teostatava koodi juurde.
             }
-            else if (kaugus <= 3.00)
-            {
-                Console.WriteLine("TUBLI kolm meetrit umbes, peaaegu, vist... not sure");
-            }
-            else
-            {
-                Console.WriteLine("Ossaraks, seda on varsti orbiidilt näha!");
+            else            //  Kaitstud sõna "else" kutsub esile järeltingimuslause, millele peab eelnema alati kas "if" või "else if" tingimuslause, ning
+            {               //  mille koodiploki sisu täidetakse ilma oma tingimuse avaldise kontrollita (ei oma avaldist) kuna else koodiplokk teostatakse
+                            //  kõikide teiste tingimuste läbikukkumisel (kõik eelnevad tagastavad tulemusena "false")
             }
         }
     }
 }
-
