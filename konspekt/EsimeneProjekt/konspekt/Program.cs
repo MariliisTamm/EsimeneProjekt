@@ -1,4 +1,6 @@
-﻿namespace EsimeneProjekt
+﻿using System.ComponentModel.Design;
+
+namespace EsimeneProjekt
 {
     internal class Program
     {
@@ -146,37 +148,162 @@
             kui aga mõlemad nimed on olemas, siis tagasta kasutajale tema ees ja perekonnanimega tervitus. ✅
             */
 
-            Console.WriteLine("Palun sisesta oma vanus, kirjuta täisarvuna: ");
-            int isikuVanus = 0;
-            isikuVanus = int.Parse(Console.ReadLine());
-            if (isikuVanus <= 0)
+            //Console.WriteLine("Palun sisesta oma vanus, kirjuta täisarvuna: ");
+            //int isikuVanus = 0;
+            //isikuVanus = int.Parse(Console.ReadLine());
+            //if (isikuVanus <= 0)
+            //{
+            //    Console.WriteLine("Ajarändureid me ei teeninda");
+            //}
+            //else if (isikuVanus > 0 && isikuVanus < 18)
+            //{
+            //    Console.WriteLine("Palun sisesta oma nimi:");
+            //    string kasutajaNimi = "";
+            //    kasutajaNimi = Console.ReadLine();
+            //    Console.WriteLine($"Kallis {kasutajaNimi}, palun kutsu siia oma lapsevanem.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Palun kirjuta siia oma Eesnimi:");
+            //    string eesNimi = "";
+            //    eesNimi = Console.ReadLine();
+            //    Console.WriteLine("Palun kirjuta siia ka oma Perekonnanimi:");
+            //    string perekonnaNimi = "";
+            //    perekonnaNimi = Console.ReadLine();
+            //    if (eesNimi == "" || perekonnaNimi == "")
+            //    {
+            //        Console.WriteLine("Sisestama pidi mõlemad nimed >:C");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"Tere päevast {eesNimi} {perekonnaNimi}!");
+            //    }
+            //}
+
+            ////castimise näide
+            //int minuArv = 9001;
+            //Console.WriteLine(minuArv);
+            //double minuDouble = minuArv;
+            //Console.WriteLine(minuDouble);
+
+            //double minuUusDouble = 6.7;
+            //Console.WriteLine(minuUusDouble);
+            //int minuUusArv = (int)minuUusDouble;
+            //Console.WriteLine(minuUusArv);
+
+            //double newData1 = 1.23d;
+            //float newFloat1 = (float)newData1;
+            //long newLong1 = (long)newFloat1;
+            //int newInt1 = (int)newLong1;
+            //char newChar1 = (char)newInt1;
+
+            //int backToInt = newChar1;
+            //long backToLong = backToInt;
+            //float backToFloat = backToLong;
+            //double backToDouble = backToFloat;
+
+            /* näiteülesanne 7 - kalkulaator */
+
+            //Console.WriteLine("Palun sisesta esimene arv");
+            //float arv1 = 0.0f;
+            //arv1 = float.Parse(Console.ReadLine());
+            //Console.WriteLine("Palun sisesta teine arv");
+            //float arv2 = 0.0f;
+            //arv2 = float.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Mis tüüpi tehet sa teha tahad (valik: + - * / ^ V");
+            //string tehteTüüp = " ";
+            //tehteTüüp = Console.ReadLine();
+
+            //double tehteTulemus = 0.0d;
+            //if (tehteTüüp != "")
+            //{
+
+            //    switch (tehteTüüp)
+            //    {
+            //        default:
+            //            Console.WriteLine("Tehtetüüp pole valitud, tehet ei sooritata.");
+            //            return;
+            //        case "+":
+            //            tulenmus = arv1 + arv2;
+            //            break;
+            //        case "-":
+            //            tulemus = arv1 - arv2;
+            //            break;
+            //        case "*":
+            //            tulemus = arv1 * arv2;
+            //            break;
+            //        case "/":
+            //            tulemus = arv1 / arv2;
+            //            break;
+            //        case "^":
+            //            tulemus = Math.Pow(arv1, arv2);
+            //            break;
+            //        case "V":
+            //            tulemus = Math.Pow(arv1, (1 / arv2));
+            //            break;
+
+            //    }
+            //    Console.WriteLine($"Tehte tulemus on: {arv1} {tehteTüüp} {arv2} = {tehteTulemus})");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Tehtetüüp pole valitud, tehet ei sooritata.");
+            //}
+
+
+            /* näiteülesanne 7.1 - kalkulaator if-elseif-else*/
+
+            Console.WriteLine("Palun sisesta esimene arv");
+            float arv1 = 0.0f;
+            arv1 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Palun sisesta teine arv");
+            float arv2 = 0.0f;
+            arv2 = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Mis tüüpi tehet sa teha tahad (valik: + - * / ^ V");
+            string tehteTüüp = " ";
+            tehteTüüp = Console.ReadLine();
+
+            double tehteTulemus = 0.0d;
+            if (tehteTüüp != "")
             {
-                Console.WriteLine("Ajarändureid me ei teeninda");
-            }
-            else if (isikuVanus > 0 && isikuVanus < 18)
-            {
-                Console.WriteLine("Palun sisesta oma nimi:");
-                string kasutajaNimi = "";
-                kasutajaNimi = Console.ReadLine();
-                Console.WriteLine($"Kallis {kasutajaNimi}, palun kutsu siia oma lapsevanem.");
-            }
-            else
-            {
-                Console.WriteLine("Palun kirjuta siia oma Eesnimi:");
-                string eesNimi = "";
-                eesNimi = Console.ReadLine();
-                Console.WriteLine("Palun kirjuta siia ka oma Perekonnanimi:");
-                string perekonnaNimi = "";
-                perekonnaNimi = Console.ReadLine();
-                if (eesNimi == "" || perekonnaNimi == "")
+                if (tehteTüüp == "+")
                 {
-                    Console.WriteLine("Sisestama pidi mõlemad nimed >:C");
+                    tehteTulemus = arv1 + arv2;
+                }
+                else if (tehteTüüp == "-")
+                {
+                    tehteTulemus = arv1 - arv2;
+                }
+                else if (tehteTüüp == "*")
+                {
+                    tehteTulemus = arv1 * arv2;
+                }
+                else if (tehteTüüp == "/")
+                {
+                    tehteTulemus = arv1 / arv2;
+                }
+                else if (tehteTüüp == "^")
+                {
+                    tehteTulemus = Math.Pow(arv1, arv2);
+                }
+                else if (tehteTüüp == "V")
+                {
+                    tehteTulemus = Math.Pow(arv1, (1 / arv2));
                 }
                 else
                 {
-                    Console.WriteLine($"Tere päevast {eesNimi} {perekonnaNimi}!");
+                    Console.WriteLine("Tehtetüüp pole valitud, tehet ei sooritata.");
+                    return;
                 }
+                Console.WriteLine($"Tehte tulemus on: {arv1} {tehteTüüp} {arv2} = {tehteTulemus})");
             }
+            else
+            {
+                Console.WriteLine("Tehtetüüp pole valitud, tehet ei sooritata.");
+            }
+
 
             /*
                 üleval harjutused
@@ -185,6 +312,26 @@
 
                 all teooria
                 */
+            ///*   -= S Ü N T A K S =-                             */
+            //Console.WriteLine("'Ommik"); //<- "1"
+            //string vastus = Console.ReadLine(); //<- "2"
+            //Console.WriteLine("C:");
+            // ;         - Iga koodilause koodiploki sees lõppeb lauselõpumärgiga
+            // Console   - Console on windowsi süsteemi/C# käsurea adresseerimise pakett, millega saab erinevasid käsurea operatsioone teha
+            // .         - Kasutatakse adresseerimiseks et saada punktile eelnevast objektist mingisugune meetod funktsioon, mis kirjutatakse
+            //             pärast punkti, võib mõelda kui kaustasuunas olevat / släshi. Antud juhul adresseeritakse reas "1" Console tööriista.
+            // WriteLine - Funktsioon mida parasjagu kasutatakse. WriteLine kuvab käsureale teksti, või kaasaantud parameetreid.
+            // ()        - Sulupaar mis omab funktsiooni tööks vajalikku infot/parameetreid.
+            // {}        - tähistab koodiplokki konteineri jaoks.
+            // []        - tähistab massiivi.
+            // ""        - tähistavad sõne andmetüüpi andmeid. Andmed ise asuvad jutumärkide vahel
+            // "string"  - andmetüüp mis kirjutatakse alat muutuja ette. andmetüübis endas asuvad ka andmetüübile vajalikud funktsioonid.
+            // "vastus"  - muutuja, mille nimi on "vastus" mis omab string-tüüpi andmeid mis omistatakse sinna sisse omistusoperaatoriga
+            // ReadLine  - Funktsioon mida reas "2" kasutatakse. ReadLine loeb käsurea pealt väikeväärtusena sõne-tüüpi andmeid.
+            // //        - Tähistab üherealist kommentaari
+            // /**/      - Tähistab plokk-kommentaari, kõik tärnide vbahel olev on välja kommenteeritud
+            // ///       - Funktsiooni summary kommentaar, kirjeldab meetodeid mille tekst kuvatakse välja tooltipina
+            //       - Taane - aitab arendajal aru saada, kuskohas millise koodiploki sees kood parasjagu asub, ning aitab järge pidada
 
             ///*   -= L I H T A N D M E T Ü Ü B I D =-             */
             //string tekst = "mingisugune inimloetav tekstike"; //tekst
@@ -200,6 +347,15 @@
             ///* Muutuja nime näide: */
             ////string string = "abc"; //is bäd
             //string sõne = "abc"; //is gud
+
+            // 1      2   3   4  5
+            string näidis = "def"; // 1 - Muutuja kirjutatakse alustades andmetüübist, ilma andmetüübita ei saa C# muutujat deklareerida
+                                   // 2 - Seejärel kirjutatakse muutuja nimi mis väljendab andmed ja nende andmete eesmärki nimisõnana
+                                   //     soovitatavalt kasutada muutujate nimetamisel camelCase stiili. esimene täht on väike, ülejäänud
+                                   //     sõnad muutuja nimes algavad suure tähega.
+                                   // 3 - omistusoperaator mis annab muutujale andmed sisse
+                                   // 4 - andmed mida omistatakse
+                                   // 5 - lauselõpumärk
 
             /*   -= O M I S T U S O P E R A A T O R I D =-          */
             // =    -> üksik võrdusmärk omistab muutja sisse väärtuse, mida adresseeritakse muutuja enda nimega
@@ -258,6 +414,29 @@
             {               //  mille koodiploki sisu täidetakse ilma oma tingimuse avaldise kontrollita (ei oma avaldist) kuna else koodiplokk teostatakse
                             //  kõikide teiste tingimuste läbikukkumisel (kõik eelnevad tagastavad tulemusena "false")
             }
+            /*   -= T E I S E N D A M I N E / C A S T I M I N E =-  */
+
+            // Castmine on arvu teisendamine ühest andmetüübist teise. Castimist on kahte eri liiki, Automaatne (Implicit) ja manuaalne (Explicit)
+            //Automaatne castimine toimub siis, kui teisendatakse väiksemast andmetüübist suuremasse, sellisel juhul prrogrammeerija spetsiifiliselt
+            //castima ei pea.
+            //Manuaalne castimine toimub siis, kui teisendatakse suuremast andmetüübist väiksemasse, sellisel juhul on vaja suurema andmetüübiga
+            //muutuja ette, asetada sulupaar kus on soovitav andmetüüp sees.
+
+            // Manuaalne castimine (Explicit)
+            double newData2 = 1.23d; //tekitatakse, või on olemas doubletüüpi andmed muutujas newData2
+            float newFloat2 = (float)newData2; //Toimub teisendus väiksemasse float andmetüüpi, double andmetüübist.
+            long newLong2 = (long)newFloat2; //Toimub teisendus väiksemasse long andmetüüpi, float andmetüübist.
+            int newInt2 = (int)newLong2; //Toimub teisendus väiksemasse int andmetüüpi, long andmetüübist.
+            char newChar2 = (char)newInt2; //Toimub teisendus väiksemasse char andmetüüpi, int andmetüübist.
+
+            //Autmaatne castimine (Implicit)
+            int backToInt2 = newChar2; //Toimub automaatne teisendus char andmetüübist int andmetüüpi.
+            long backToLong2 = backToInt2; //Toimub automaatne teisendus int andmetüübist long andmetüüpi.
+            float backToFloat2 = backToLong2; //Toimub automaatne teisendus long andmetüübist float andmetüüpi.
+            double backToDouble2 = backToFloat2;  //Toimub automaatne teisendus float andmetüübist double andmetüüpi.
+
+            // Suuremast väiksemasse teisendus kaotab andmeresolutsiooni,
+            // kaotatud andmeid ei saa tagasi suuremasse andmetüüpi castimisega tagasi
         }
     }
 }
