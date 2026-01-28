@@ -254,55 +254,46 @@ namespace EsimeneProjekt
 
             /* näiteülesanne 7.1 - kalkulaator if-elseif-else*/
 
-            Console.WriteLine("Palun sisesta esimene arv");
-            float arv1 = 0.0f;
-            arv1 = float.Parse(Console.ReadLine());
-            Console.WriteLine("Palun sisesta teine arv");
-            float arv2 = 0.0f;
-            arv2 = float.Parse(Console.ReadLine());
 
-            Console.WriteLine("Mis tüüpi tehet sa teha tahad (valik: + - * / ^ V");
-            string tehteTüüp = " ";
-            tehteTüüp = Console.ReadLine();
 
-            double tehteTulemus = 0.0d;
-            if (tehteTüüp != "")
+            /* Näididsülesanne 8 */
+
+            //kirjuta progaramm mis 
+            // küsib kasutajatelt pikkust *sentimeetrites*
+            //küsib tema teiste perekonnaliikmete pikkust (ema isa vend)
+            // programm arvutab välja perekonna keskmise pikkuse, vanemate keskmise pikkuse, laste keskimise pikkuse ja kahe keskmise vahe,
+            // kõik arvud peab programm esitama komakoha arvudena
+            int kasutajapikkus = 0;
+            int vennapikkus = 0;
+            int emapikkus = 0;
+            int isapikkus = 0;
+            Console.WriteLine("Mis on sinu pikkus sentimeetrites: ");
+            kasutajapikkus = int.Parse(Console.ReadLine());
+            Console.WriteLine("Mis on sinu venna pikkus sentimeetrites: ");
+            vennapikkus = int.Parse(Console.ReadLine());
+            Console.WriteLine("Mis on sinu ema pikkus sentimeetrites: ");
+            emapikkus = int.Parse(Console.ReadLine());
+            Console.WriteLine("Mis on sinu isa pikkus sentimeetrites: ");
+            isapikkus = int.Parse(Console.ReadLine());
+            float perekeskmine = ((kasutajapikkus + vennapikkus + emapikkus + isapikkus) / 4) / 100;
+            float vanematekeskmine = ((emapikkus + isapikkus) / 2) / 100;
+            float lastekeskmine = ((kasutajapikkus + vennapikkus) / 2) / 100;
+            float vahe = 0;
+            if (vanematekeskmine > lastekeskmine)
             {
-                if (tehteTüüp == "+")
-                {
-                    tehteTulemus = arv1 + arv2;
-                }
-                else if (tehteTüüp == "-")
-                {
-                    tehteTulemus = arv1 - arv2;
-                }
-                else if (tehteTüüp == "*")
-                {
-                    tehteTulemus = arv1 * arv2;
-                }
-                else if (tehteTüüp == "/")
-                {
-                    tehteTulemus = arv1 / arv2;
-                }
-                else if (tehteTüüp == "^")
-                {
-                    tehteTulemus = Math.Pow(arv1, arv2);
-                }
-                else if (tehteTüüp == "V")
-                {
-                    tehteTulemus = Math.Pow(arv1, (1 / arv2));
-                }
-                else
-                {
-                    Console.WriteLine("Tehtetüüp pole valitud, tehet ei sooritata.");
-                    return;
-                }
-                Console.WriteLine($"Tehte tulemus on: {arv1} {tehteTüüp} {arv2} = {tehteTulemus})");
+                vahe = vanematekeskmine - lastekeskmine;
+
             }
             else
             {
-                Console.WriteLine("Tehtetüüp pole valitud, tehet ei sooritata.");
+                vahe = lastekeskmine - vanematekeskmine;
             }
+            Console.WriteLine("perekeskmine on " + Math.Round(perekeskmine,2) + " m. vanematekeskmine on " + Math.Round(vanematekeskmine,2) + 
+                "m.\nlastekesmine on" + Math.Round(lastekeskmine,2) +
+                "m. kahe keskmise vahe on " + Math.Round(vahe,2)+"m. ");
+
+
+
 
 
             /*
@@ -312,7 +303,9 @@ namespace EsimeneProjekt
 
                 all teooria
                 */
-            ///*   -= S Ü N T A K S =-                             */
+
+            ///*   -=   S Ü N T A K S   =-      */
+            //
             //Console.WriteLine("'Ommik"); //<- "1"
             //string vastus = Console.ReadLine(); //<- "2"
             //Console.WriteLine("C:");
@@ -333,7 +326,10 @@ namespace EsimeneProjekt
             // ///       - Funktsiooni summary kommentaar, kirjeldab meetodeid mille tekst kuvatakse välja tooltipina
             //       - Taane - aitab arendajal aru saada, kuskohas millise koodiploki sees kood parasjagu asub, ning aitab järge pidada
 
-            ///*   -= L I H T A N D M E T Ü Ü B I D =-             */
+
+
+            ///*   -=  L I H T A N D M E T Ü Ü B I D  =-      */
+            //
             //string tekst = "mingisugune inimloetav tekstike"; //tekst
             //char täht = 'A';
             //int arv = 1; //täisarv
@@ -349,7 +345,7 @@ namespace EsimeneProjekt
             //string sõne = "abc"; //is gud
 
             // 1      2   3   4  5
-            string näidis = "def"; // 1 - Muutuja kirjutatakse alustades andmetüübist, ilma andmetüübita ei saa C# muutujat deklareerida
+            //string näidis = "def"; // 1 - Muutuja kirjutatakse alustades andmetüübist, ilma andmetüübita ei saa C# muutujat deklareerida
                                    // 2 - Seejärel kirjutatakse muutuja nimi mis väljendab andmed ja nende andmete eesmärki nimisõnana
                                    //     soovitatavalt kasutada muutujate nimetamisel camelCase stiili. esimene täht on väike, ülejäänud
                                    //     sõnad muutuja nimes algavad suure tähega.
@@ -357,26 +353,52 @@ namespace EsimeneProjekt
                                    // 4 - andmed mida omistatakse
                                    // 5 - lauselõpumärk
 
-            /*   -= O M I S T U S O P E R A A T O R I D =-          */
+
+            /*   K A I T S T U D S Õ N A D    */
+            //
+            //Kaitstud sõnad on kindlad nimi/tegusõnad mida C# kasutab oma koodistruktuuride tähistamiseks
+            // et ära hoida keerukat näpuga järje ajamist ning kompilaatori töö lihtsustamist ei saa järgnevaid sõnu 
+            // muutuja nimestamiselkasutada nendeks on:
+            //
+            //abstract    as          base        bool        break     byte        case
+            //catch       char        checked     class       const     continue    decimal
+            //default     delegate    do          double      else      enum        event
+            //explicit    extern      false       finally     fixed     float       for
+            //foreach     goto        if          implicit    in        int         interface
+            //internal    is          lock        long        namespace  new         null
+            //object      operator    out         override    params    private     protected
+            //public      readonly    ref         return      sbyte     sealed      short
+            //sizeof      stackalloc  static      string      struct    switch      this
+            //throw       true        try         typeof      uint      ulong       unchecked
+            //unsafe      ushort      using       virtual     void      volatile    while
+            
+
+
+
+            /*   -=  O M I S T U S O P E R A A T O R I D  =-    */
+            //
             // =    -> üksik võrdusmärk omistab muutja sisse väärtuse, mida adresseeritakse muutuja enda nimega
-            int muutuja = 1;
+            //int muutuja = 1;
             // +=   -> võrdusmärk mille ees on pluss, automaatselt liidab muutujale otsa võrdusmärgi teisel pool oleva väärtuse
-            muutuja += 2;
+            //muutuja += 2;
             // -=   -> võrdusmärk mille ees on miinus, automaatselt lahutab muutujas olevast väärtusest võrdusmärgi teisel pool oleva väärtuse
-            muutuja -= 1;
+            //muutuja -= 1;
             // *=   -> võrdusmärk mille ees on korrutusmärk, automaatselt korrutab muutuja sisu võrdusmärgi teisel pool oleva väärtuse kordi
-            muutuja *= 3;
+            //muutuja *= 3;
             // /=   -> võrdusmärk mille ees on jagamismärk, automaatselt jagab muutuja sisu võrdusmärgi teisel pool oleva väärtuse osadeks
-            muutuja /= 4;
+            //muutuja /= 4;
             // %=   -> võrdusmärk mille ees on modulus, automaatselt jätab muutujasse jäägi.
-            muutuja %= 2;
+            //muutuja %= 2;
 
             // ++   -> on kiirtehe, mis muutujale liidab ainult ühe juurde.
-            muutuja++;
+            //muutuja++;
             // --   -> on kiirtehe, mis muutujast lahutab ainult ühe maha.
-            muutuja--;
+            //muutuja--;
 
-            /*   -= V Õ R D L U S O P E R A A T O R I D =-          */
+
+
+            /*   -=   V Õ R D L U S O P E R A A T O R I D  =-     */
+            //
             // ==   ->  "on võrdne/on täpselt sama" - Võrdusmärkide ühel pool olev objekt peab vastama
             //          oma olemuselt täpselt võrdusmärkide teisel pool oleva objektiga
             // >    ->  "on suurem kui" - Märgist vasakul pool olev objekt peaks olema suurem kui paremal pool olev objekt
@@ -388,7 +410,10 @@ namespace EsimeneProjekt
             // !=   ->  "ei tohi olla" võrdusmärgi vasakul pool olev objekt ei tohi omada IDENTSET kuju paremal pool oleva objektiga, kõik muud
             //          väärtused on lubatud.
 
-            /*   -= L O O G I L I S E D    T E H T E D =-          */
+
+
+            /*   -=  L O O G I L I S E D    T E H T E D  =-  */
+            //
             // &&   ->  "AND" loogiline tehe, mida kasutatakse tingimuste kirjeldamisel, ning mis annab positiivse vastuse "true" juhul kui
             //          mõlemal pool märki "&&" olevad tingimused omakorda annavad oma avaldise tulemusena "true"
             //          või teisisõnu: true + true = true
@@ -399,7 +424,10 @@ namespace EsimeneProjekt
             //          hüüumärgi abil nüüd tagastab false, ja vastupidi - tulemus mis muidu tagastaks "false", nüüd tagastab "true".
             //          ehk teisisõnu: true = false / false = true
 
-            /*   -= T I N G I M U S L A U S E =-                   */
+
+
+            /*   -=  T I N G I M U S L A U S E  =-    */
+
             if (true)       //  Kaitstud sõna "if" kutsub esile tingimuslause, mille tingimuse avaldis on sellele järgnevate () sulgude vahel.
             {               //  Järgneb {} loogeliste sulgude vahel koodiplokk, mis teostatakse siis, kui tingimuse avaldis annab tulemusena "true",
                             //  "false" tulemuse puhul jäetakse kood vahele
@@ -414,6 +442,9 @@ namespace EsimeneProjekt
             {               //  mille koodiploki sisu täidetakse ilma oma tingimuse avaldise kontrollita (ei oma avaldist) kuna else koodiplokk teostatakse
                             //  kõikide teiste tingimuste läbikukkumisel (kõik eelnevad tagastavad tulemusena "false")
             }
+
+
+
             /*   -= T E I S E N D A M I N E / C A S T I M I N E =-  */
 
             // Castmine on arvu teisendamine ühest andmetüübist teise. Castimist on kahte eri liiki, Automaatne (Implicit) ja manuaalne (Explicit)
@@ -437,6 +468,30 @@ namespace EsimeneProjekt
 
             // Suuremast väiksemasse teisendus kaotab andmeresolutsiooni,
             // kaotatud andmeid ei saa tagasi suuremasse andmetüüpi castimisega tagasi
+
+            // Parsimine on tekstist katse teisendada mingit tüüpi arvandmeid.Teisendus toimub küsides mingist andmetüübist talle 
+            //sisse ehitatud meetodi "Parse()" abil mingist sõnest arvandmeid.
+            string seeOnText = "1";                  //Mingisuguine sõne mis omab endas potensiaalselt mingit arvulist väärtust
+            int teisendatud = int.Parse(seeOnText);  //muutuja "teisendatud" kuhu omistatakse "Parse()" meetodi abil sõnest arvväärtus
+            Console.WriteLine(teisendatud);          //Teisenduse väljakuvamine käsureale
+
+            // Parsimisel on olemas ka alternatiivne meetod TryParse(). TryParse üritab teisendada ja kui teisendus kukub läbi, tagastatakse
+            // algne väärtus/false
+            string seeOnText2 = "2";                  //Mingisuguine sõne mis omab endas potensiaalselt mingit arvulist väärtust
+            Console.WriteLine(int.TryParse(seeOnText2, out int result));          //Teisenduse väljakuvamine käsureale
+
+            // Konverteerimine on mingisuguse andme otsene teisendus ükskõik mis teise andmetüüpi. Selle jaoks on olemas moodul "Convert".
+            // Konvetrtmoodulis on sarnaselt andmetüüpides olevale ToString() meetodile ka muude andmetüüpide vastavad konverteerimismeetodid.
+            string mingiInfo = "6,7";                             //on olemas mingisugune teisendamist vajav info
+            string mingiInfoText = Convert.ToString(mingiInfo); //Convert.ToString() teisendab tundmatust andmetüübist info stringiks/sõneks.
+            char mingiInfoChar = Convert.ToChar(mingiInfo);     //Convert.ToChar() teisendab tundmatust andmetüübist info char andmetüübiks.
+            int mingiInfoInt = Convert.ToInt32(mingiInfo);      //Convert.ToInt32() teisendab tundmatust andmetüübist info int andmetüübiks.
+            long mingiInfoLong = Convert.ToInt64(mingiInfo);    //Convert.ToInt64() teisendab tundmatust andmetüübist info long andmetüübiks.
+            float mingiInfoFloat = Convert.ToSingle(mingiInfo); //Convert.ToSingle() teisendab tundmatust andmetüübist info float andmetüübiks. 
+            decimal mingiInfoDecimal = Convert.ToDecimal(mingiInfo); //Convert.ToDecimal() teisendab tundmatust andmetüübist info decimal andmetüübiks.
+            double mingiInfoDouble = Convert.ToDouble(mingiInfo);   //Convert.ToDouble() teisendab tundmatust andmetüübist info double andmetüübiks.
+            byte mingiInfoByte = Convert.ToByte(mingiInfo);       //Convert.ToByte() teisendab tundmatust andmetüübist info byte andmetüübiks.
+            bool mingiInfoBool = Convert.ToBoolean(mingiInfo); //Convert.ToBoolean() teisendab tundmatust andmetüübist info bool andmetüübiks.
         }
     }
 }
